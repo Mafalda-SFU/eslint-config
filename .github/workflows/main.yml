@@ -17,7 +17,7 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - run: npm ci
+      - run: npm ci --verbose
       - run: npm run test:json
       - run: npm run docs
 
