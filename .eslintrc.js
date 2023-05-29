@@ -8,6 +8,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
+    'plugin:@cspell/recommended',
     'plugin:@mafalda-sfu/recommended',
     'plugin:import/recommended',
     'plugin:json/recommended',
