@@ -9,6 +9,7 @@ Object {
     "eslint:recommended",
     "plugin:@cspell/recommended",
     "plugin:@mafalda-sfu/recommended",
+    "plugin:editorconfig/all",
     "plugin:import/recommended",
     "plugin:json/recommended",
     "plugin:n/recommended",
@@ -49,6 +50,7 @@ Object {
     "sourceType": "module",
   },
   "plugins": Array [
+    "editorconfig",
     "require-duplicate",
     "sort-destructure-keys",
     "sort-keys",
@@ -80,6 +82,22 @@ Object {
       "error",
       "multi",
     ],
+    "editorconfig/indent": Array [
+      "error",
+      Object {
+        "SwitchCase": 1,
+        "ignoredNodes": Array [
+          "TemplateLiteral",
+        ],
+        "offsetTernaryExpressions": true,
+      },
+    ],
+    "editorconfig/max-len": Array [
+      "warn",
+      Object {
+        "ignorePattern": "^\\\\s*((//|/\\\\*|\\\\*)?\\\\s*\\\\S*[^:/?#]://[^?#]\\\\S*\\\\s*$|^import\\\\s([^\\\\{]|//|/\\\\*)+)",
+      },
+    ],
     "function-paren-newline": Array [
       "error",
       "consistent",
@@ -105,25 +123,7 @@ Object {
       },
     ],
     "import/prefer-default-export": "warn",
-    "indent": Array [
-      "error",
-      2,
-      Object {
-        "SwitchCase": 1,
-        "ignoredNodes": Array [
-          "TemplateLiteral",
-        ],
-        "offsetTernaryExpressions": true,
-      },
-    ],
     "max-classes-per-file": "error",
-    "max-len": Array [
-      "warn",
-      Object {
-        "ignorePattern": "^\\\\s*((//|\\\\*)?\\\\s*\\\\S*[^:/?#]://[^?#]\\\\S*\\\\s*$|import\\\\s([^\\\\{]|//|/\\\\*)+)",
-        "tabWidth": 2,
-      },
-    ],
     "n/prefer-promises/dns": "error",
     "n/prefer-promises/fs": "error",
     "newline-per-chained-call": "warn",

@@ -48,6 +48,7 @@
   "dependencies": {
     "@cspell/eslint-plugin": "^6.31.1",
     "@typescript-eslint/parser": "^5.59.7"
+    "eslint-plugin-editorconfig": "mafalda-sfu/eslint-plugin-editorconfig",
   },
   "devDependencies": {
     "c8": "^7.14.0",

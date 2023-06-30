@@ -1,5 +1,4 @@
 const ecmaVersion = 2022  // Node.js 16
-const tabWidth = 2
 
 
 module.exports = {
@@ -10,6 +9,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@cspell/recommended',
     'plugin:@mafalda-sfu/recommended',
+    'plugin:editorconfig/all',
     'plugin:import/recommended',
     'plugin:json/recommended',
     'plugin:n/recommended'
@@ -53,6 +53,7 @@ module.exports = {
     sourceType: 'module'  // Allows for the use of imports
   },
   plugins: [
+    'editorconfig',
     'require-duplicate',
     'sort-destructure-keys',
     'sort-keys',
@@ -69,6 +70,18 @@ module.exports = {
     'comma-dangle': 'error',
     'consistent-return': ['error', {treatUndefinedAsUnspecified: true}],
     curly: ['error', 'multi'],
+    'editorconfig/indent': ['error', {
+      SwitchCase: 1,
+      ignoredNodes: ['TemplateLiteral'],
+      offsetTernaryExpressions: true
+    }],
+    'editorconfig/max-len': ['warn', {
+      // Ignore comment lines that pass the max length limit that have just only
+      // an URL, or an `import` statement without comments nor named exports.
+      // See https://github.com/eslint/eslint/issues/15928
+      ignorePattern: '^\\s*((//|/\\*|\\*)?\\s*\\S*[^:/?#]://[^?#]\\S*\\s*$|' +
+        '^import\\s([^\\{]|//|/\\*)+)'
+    }],
     'function-paren-newline': ['error', 'consistent'],
     'import/extensions': [
       // ESM spec requires extensions for all `import` statements, but
@@ -88,20 +101,7 @@ module.exports = {
       }
     ],
     'import/prefer-default-export': 'warn',
-    indent: ['error', tabWidth, {
-      SwitchCase: 1,
-      ignoredNodes: ['TemplateLiteral'],
-      offsetTernaryExpressions: true
-    }],
     'max-classes-per-file': 'error',
-    'max-len': ['warn', {
-      // Ignore comment lines that pass the max length limit that have just only
-      // an URL or an `import` statement without comments nor named exports.
-      // See https://github.com/eslint/eslint/issues/15928
-      ignorePattern: '^\\s*((//|\\*)?\\s*\\S*[^:/?#]://[^?#]\\S*\\s*$|import' +
-        '\\s([^\\{]|//|/\\*)+)',
-      tabWidth
-    }],
     'n/prefer-promises/dns': 'error',
     'n/prefer-promises/fs': 'error',
     'newline-per-chained-call': 'warn',
