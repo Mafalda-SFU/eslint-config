@@ -11,10 +11,35 @@ Object {
     "plugin:@mafalda-sfu/recommended",
     "plugin:editorconfig/all",
     "plugin:import/recommended",
-    "plugin:json/recommended",
     "plugin:n/recommended",
   ],
   "overrides": Array [
+    Object {
+      "extends": Array [
+        "plugin:json/recommended",
+      ],
+      "files": Array [
+        "*.json",
+      ],
+      "overrides": Array [
+        Object {
+          "extends": Array [
+            "plugin:package-json/recommended",
+          ],
+          "files": Array [
+            "package.json",
+          ],
+          "plugins": Array [
+            "package-json",
+          ],
+        },
+      ],
+      "rules": Object {
+        "quote-props": "off",
+        "quotes": "off",
+        "sort-keys/sort-keys-fix": "off",
+      },
+    },
     Object {
       "extends": Array [
         "plugin:@mafalda-sfu/typescript",

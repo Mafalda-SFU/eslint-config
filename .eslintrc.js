@@ -11,10 +11,32 @@ module.exports = {
     'plugin:@mafalda-sfu/recommended',
     'plugin:editorconfig/all',
     'plugin:import/recommended',
-    'plugin:json/recommended',
     'plugin:n/recommended'
   ],
   overrides: [
+    {
+      extends: [
+        'plugin:json/recommended'
+      ],
+      files: ['*.json'],
+      overrides: [
+        {
+          extends: [
+            'plugin:package-json/recommended'
+          ],
+          files: ['package.json'],
+          plugins: [
+            'package-json'
+          ]
+        }
+      ],
+      // HACK: remove on flat config
+      rules: {
+        'quote-props': 'off',
+        quotes: 'off',
+        'sort-keys/sort-keys-fix': 'off'
+      }
+    },
     {
       extends: [
         'plugin:@mafalda-sfu/typescript',
