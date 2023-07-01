@@ -11,6 +11,8 @@ Object {
     "plugin:@mafalda-sfu/recommended",
     "plugin:editorconfig/all",
     "plugin:import/recommended",
+    "plugin:jsdoc/recommended",
+    "plugin:markdown/recommended",
     "plugin:n/recommended",
   ],
   "overrides": Array [
@@ -46,6 +48,7 @@ Object {
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:import/typescript",
+        "plugin:jsdoc/recommended-typescript",
       ],
       "files": Array [
         "*.ts?(x)",

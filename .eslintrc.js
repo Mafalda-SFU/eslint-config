@@ -11,6 +11,8 @@ module.exports = {
     'plugin:@mafalda-sfu/recommended',
     'plugin:editorconfig/all',
     'plugin:import/recommended',
+    'plugin:jsdoc/recommended',
+    'plugin:markdown/recommended',
     'plugin:n/recommended'
   ],
   overrides: [
@@ -43,7 +45,8 @@ module.exports = {
         // Use the recommended rules from the `@typescript-eslint/eslint-plugin`
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:import/typescript'
+        'plugin:import/typescript',
+        'plugin:jsdoc/recommended-typescript'
       ],
       files: ['*.ts?(x)'],
       parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
