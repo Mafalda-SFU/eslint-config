@@ -14,6 +14,7 @@ Object {
     "plugin:jsdoc/recommended",
     "plugin:markdown/recommended",
     "plugin:n/recommended",
+    "plugin:promise/recommended",
   ],
   "overrides": Array [
     Object {
@@ -204,6 +205,7 @@ Object {
         "enforceForRenamedProperties": true,
       },
     ],
+    "promise/no-multiple-resolved": "error",
     "quote-props": Array [
       "error",
       "as-needed",

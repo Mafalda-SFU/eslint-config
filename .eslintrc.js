@@ -13,7 +13,8 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:jsdoc/recommended',
     'plugin:markdown/recommended',
-    'plugin:n/recommended'
+    'plugin:n/recommended',
+    'plugin:promise/recommended'
   ],
   overrides: [
     {
@@ -158,6 +159,7 @@ module.exports = {
         enforceForRenamedProperties: true
       }
     ],
+    'promise/no-multiple-resolved': 'error',
     'quote-props': ['error', 'as-needed'],
     quotes: ['error', 'single', {avoidEscape: true}],
     'require-duplicate/no-duplicate': 'error',
