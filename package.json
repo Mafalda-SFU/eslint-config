@@ -60,6 +60,7 @@
     "eslint-plugin-require-duplicate": "^1.1.0",
     "eslint-plugin-sort-destructure-keys": "^1.5.0",
     "eslint-plugin-sort-keys": "^2.3.5",
+    "eslint-plugin-typescript-sort-keys": "^2.3.0",
     "eslint-plugin-unused-imports": "^2.0.0"
   },
   "engines": {

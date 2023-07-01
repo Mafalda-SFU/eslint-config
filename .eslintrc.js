@@ -47,7 +47,8 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:import/typescript',
-        'plugin:jsdoc/recommended-typescript'
+        'plugin:jsdoc/recommended-typescript',
+        'plugin:typescript-sort-keys/recommended'
       ],
       files: ['*.ts?(x)'],
       parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
