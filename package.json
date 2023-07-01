@@ -45,14 +45,17 @@
     "mocha-chai-jest-snapshot": "^1.1.4"
   },
   "peerDependencies": {
+    "@cspell/eslint-plugin": "^6.31.1",
     "@mafalda-sfu/eslint-plugin": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "eslint": "^8.40.0",
+    "eslint-plugin-editorconfig": "mafalda-sfu/eslint-plugin-editorconfig",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsdoc": "^46.4.3",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-n": "^16.0.0-0",
+    "eslint-plugin-package-json": "^0.1.4",
     "eslint-plugin-require-duplicate": "^1.1.0",
     "eslint-plugin-sort-destructure-keys": "^1.5.0",
     "eslint-plugin-sort-keys": "^2.3.5",
