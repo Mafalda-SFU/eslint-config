@@ -2,21 +2,145 @@
 
 exports[`layout 1`] = `
 Object {
-  "env": Object {
-    "es2022": true,
-  },
-  "extends": Array [
-    "eslint:recommended",
-    "plugin:@cspell/recommended",
-    "plugin:@mafalda-sfu/recommended",
-    "plugin:editorconfig/all",
-    "plugin:import/recommended",
-    "plugin:jsdoc/recommended",
-    "plugin:markdown/recommended",
-    "plugin:n/recommended",
-    "plugin:promise/recommended",
-  ],
   "overrides": Array [
+    Object {
+      "extends": Array [
+        "plugin:editorconfig/all",
+      ],
+      "files": Array [
+        "*",
+      ],
+      "plugins": Array [
+        "editorconfig",
+      ],
+      "rules": Object {
+        "editorconfig/indent": Array [
+          "error",
+          Object {
+            "SwitchCase": 1,
+            "ignoredNodes": Array [
+              "TemplateLiteral",
+            ],
+            "offsetTernaryExpressions": true,
+          },
+        ],
+        "editorconfig/max-len": Array [
+          "warn",
+          Object {
+            "ignorePattern": "^\\\\s*((//|/\\\\*|\\\\*)?\\\\s*\\\\S*[^:/?#]://[^?#]\\\\S*\\\\s*$|^import\\\\s([^\\\\{]|//|/\\\\*)+)",
+          },
+        ],
+        "no-tabs": "error",
+      },
+    },
+    Object {
+      "env": Object {
+        "es2022": true,
+      },
+      "extends": Array [
+        "plugin:@mafalda-sfu/layout",
+      ],
+      "files": Array [
+        "*.[jt]s?(x)",
+      ],
+      "parserOptions": Object {
+        "ecmaVersion": 2022,
+        "sourceType": "module",
+      },
+      "plugins": Array [
+        "sort-destructure-keys",
+        "sort-keys",
+      ],
+      "rules": Object {
+        "@mafalda-sfu/brace-style": Array [
+          "error",
+          "allman-multiline",
+          Object {
+            "allowSingleLine": true,
+          },
+        ],
+        "array-bracket-spacing": "error",
+        "arrow-body-style": "warn",
+        "arrow-parens": Array [
+          "error",
+          "as-needed",
+        ],
+        "comma-dangle": "error",
+        "curly": Array [
+          "error",
+          "multi",
+        ],
+        "function-paren-newline": Array [
+          "error",
+          "consistent",
+        ],
+        "max-classes-per-file": "error",
+        "newline-per-chained-call": "warn",
+        "no-multiple-empty-lines": Array [
+          "error",
+          Object {
+            "max": 2,
+            "maxBOF": 1,
+            "maxEOF": 0,
+          },
+        ],
+        "object-curly-newline": Array [
+          "error",
+          Object {
+            "consistent": true,
+            "multiline": true,
+          },
+        ],
+        "object-curly-spacing": "error",
+        "one-var": Array [
+          "error",
+          "never",
+        ],
+        "quote-props": Array [
+          "error",
+          "as-needed",
+        ],
+        "quotes": Array [
+          "error",
+          "single",
+          Object {
+            "avoidEscape": true,
+          },
+        ],
+        "semi": Array [
+          "error",
+          "never",
+        ],
+        "semi-spacing": "error",
+        "semi-style": "error",
+        "sort-destructure-keys/sort-destructure-keys": "error",
+        "sort-keys": "off",
+        "sort-keys/sort-keys-fix": Array [
+          "error",
+          "asc",
+          Object {
+            "natural": true,
+          },
+        ],
+      },
+    },
+    Object {
+      "extends": Array [
+        "plugin:jsdoc/recommended-typescript",
+        "plugin:typescript-sort-keys/recommended",
+      ],
+      "files": Array [
+        "*.ts?(x)",
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": Object {
+        "project": "./tsconfig*.json",
+      },
+      "rules": Object {
+        "@typescript-eslint/object-curly-spacing": "error",
+        "object-curly-spacing": "off",
+      },
+    },
     Object {
       "extends": Array [
         "plugin:json/recommended",
@@ -24,33 +148,194 @@ Object {
       "files": Array [
         "*.json",
       ],
-      "overrides": Array [
-        Object {
-          "extends": Array [
-            "plugin:package-json/recommended",
-          ],
-          "files": Array [
-            "package.json",
-          ],
-          "plugins": Array [
-            "package-json",
-          ],
-        },
+    },
+    Object {
+      "extends": Array [
+        "plugin:package-json/recommended",
+      ],
+      "files": Array [
+        "package.json",
+      ],
+      "plugins": Array [
+        "package-json",
       ],
       "rules": Object {
-        "quote-props": "off",
-        "quotes": "off",
-        "sort-keys/sort-keys-fix": "off",
+        "package-json/order-properties": Array [
+          "error",
+          Array [
+            "name",
+            "version",
+            "private",
+            "publishConfig",
+            "description",
+            "main",
+            "exports",
+            "browser",
+            "files",
+            "bin",
+            "man",
+            "directories",
+            "scripts",
+            "repository",
+            "keywords",
+            "author",
+            "license",
+            "bugs",
+            "homepage",
+            "config",
+            "dependencies",
+            "devDependencies",
+            "peerDependencies",
+            "optionalDependencies",
+            "bundledDependencies",
+            "engines",
+            "os",
+            "cpu",
+          ],
+        ],
+      },
+    },
+    Object {
+      "env": Object {
+        "es2022": true,
+      },
+      "extends": Array [
+        "plugin:@mafalda-sfu/suggestions",
+        "plugin:jsdoc/recommended",
+        "plugin:markdown/recommended",
+      ],
+      "files": Array [
+        "*.[jt]s?(x)",
+      ],
+      "parserOptions": Object {
+        "ecmaVersion": 2022,
+        "sourceType": "module",
+      },
+      "plugins": Array [
+        "n",
+        "unused-imports",
+      ],
+      "rules": Object {
+        "@typescript-eslint/no-unused-vars": "off",
+        "class-methods-use-this": "error",
+        "n/prefer-promises/dns": "error",
+        "n/prefer-promises/fs": "error",
+        "no-console": "error",
+        "no-extra-boolean-cast": "error",
+        "no-nested-ternary": "warn",
+        "no-new": "warn",
+        "no-plusplus": "warn",
+        "no-shadow": "warn",
+        "no-undef-init": "error",
+        "no-unused-private-class-members": "error",
+        "no-unused-vars": "off",
+        "no-useless-escape": "error",
+        "no-void": Array [
+          "error",
+          Object {
+            "allowAsStatement": true,
+          },
+        ],
+        "prefer-destructuring": Array [
+          "error",
+          Object {
+            "array": true,
+            "object": true,
+          },
+          Object {
+            "enforceForRenamedProperties": true,
+          },
+        ],
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": Array [
+          "warn",
+          Object {
+            "args": "after-used",
+            "argsIgnorePattern": "^_",
+            "vars": "all",
+            "varsIgnorePattern": "^_",
+          },
+        ],
       },
     },
     Object {
       "extends": Array [
-        "plugin:@mafalda-sfu/typescript",
+        "plugin:@mafalda-sfu/suggestions-typescript",
+      ],
+      "files": Array [
+        "*.ts?(x)",
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": Object {
+        "project": "./tsconfig*.json",
+      },
+    },
+    Object {
+      "extends": Array [
+        "eslint:recommended",
+        "plugin:@cspell/recommended",
+        "plugin:import/recommended",
+        "plugin:n/recommended",
+      ],
+      "files": Array [
+        "*",
+      ],
+    },
+    Object {
+      "env": Object {
+        "es2022": true,
+      },
+      "extends": Array [
+        "plugin:promise/recommended",
+      ],
+      "files": Array [
+        "*.[jt]s?(x)",
+      ],
+      "parserOptions": Object {
+        "ecmaVersion": 2022,
+        "sourceType": "module",
+      },
+      "plugins": Array [
+        "import",
+      ],
+      "rules": Object {
+        "consistent-return": Array [
+          "error",
+          Object {
+            "treatUndefinedAsUnspecified": true,
+          },
+        ],
+        "import/extensions": Array [
+          "error",
+          "ignorePackages",
+          Object {
+            "ts": "never",
+            "tsx": "never",
+          },
+        ],
+        "import/no-named-as-default": "warn",
+        "import/no-unresolved": "off",
+        "import/order": Array [
+          "error",
+          Object {
+            "alphabetize": Object {
+              "order": "asc",
+            },
+            "newlines-between": "always",
+            "warnOnUnassignedImports": true,
+          },
+        ],
+        "import/prefer-default-export": "warn",
+        "no-param-reassign": "off",
+        "no-useless-catch": "error",
+        "promise/no-multiple-resolved": "error",
+      },
+    },
+    Object {
+      "extends": Array [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:import/typescript",
-        "plugin:jsdoc/recommended-typescript",
-        "plugin:typescript-sort-keys/recommended",
       ],
       "files": Array [
         "*.ts?(x)",
@@ -68,176 +353,9 @@ Object {
           },
         ],
         "@typescript-eslint/no-shadow": "error",
-        "@typescript-eslint/no-unused-vars": "off",
-        "@typescript-eslint/object-curly-spacing": "error",
         "no-shadow": "off",
-        "object-curly-spacing": "off",
       },
     },
   ],
-  "parserOptions": Object {
-    "ecmaVersion": 2022,
-    "sourceType": "module",
-  },
-  "plugins": Array [
-    "editorconfig",
-    "require-duplicate",
-    "sort-destructure-keys",
-    "sort-keys",
-    "unused-imports",
-  ],
-  "rules": Object {
-    "@mafalda-sfu/brace-style": Array [
-      "error",
-      "allman-multiline",
-      Object {
-        "allowSingleLine": true,
-      },
-    ],
-    "array-bracket-spacing": "error",
-    "arrow-body-style": "warn",
-    "arrow-parens": Array [
-      "error",
-      "as-needed",
-    ],
-    "class-methods-use-this": "error",
-    "comma-dangle": "error",
-    "consistent-return": Array [
-      "error",
-      Object {
-        "treatUndefinedAsUnspecified": true,
-      },
-    ],
-    "curly": Array [
-      "error",
-      "multi",
-    ],
-    "editorconfig/indent": Array [
-      "error",
-      Object {
-        "SwitchCase": 1,
-        "ignoredNodes": Array [
-          "TemplateLiteral",
-        ],
-        "offsetTernaryExpressions": true,
-      },
-    ],
-    "editorconfig/max-len": Array [
-      "warn",
-      Object {
-        "ignorePattern": "^\\\\s*((//|/\\\\*|\\\\*)?\\\\s*\\\\S*[^:/?#]://[^?#]\\\\S*\\\\s*$|^import\\\\s([^\\\\{]|//|/\\\\*)+)",
-      },
-    ],
-    "function-paren-newline": Array [
-      "error",
-      "consistent",
-    ],
-    "import/extensions": Array [
-      "error",
-      "ignorePackages",
-      Object {
-        "ts": "never",
-        "tsx": "never",
-      },
-    ],
-    "import/no-named-as-default": "warn",
-    "import/no-unresolved": "off",
-    "import/order": Array [
-      "error",
-      Object {
-        "alphabetize": Object {
-          "order": "asc",
-        },
-        "newlines-between": "always",
-        "warnOnUnassignedImports": true,
-      },
-    ],
-    "import/prefer-default-export": "warn",
-    "max-classes-per-file": "error",
-    "n/prefer-promises/dns": "error",
-    "n/prefer-promises/fs": "error",
-    "newline-per-chained-call": "warn",
-    "no-console": "error",
-    "no-extra-boolean-cast": "error",
-    "no-multiple-empty-lines": Array [
-      "error",
-      Object {
-        "max": 2,
-        "maxBOF": 1,
-        "maxEOF": 0,
-      },
-    ],
-    "no-nested-ternary": "warn",
-    "no-new": "warn",
-    "no-param-reassign": "off",
-    "no-plusplus": "warn",
-    "no-shadow": "warn",
-    "no-tabs": "error",
-    "no-undef-init": "error",
-    "no-unused-private-class-members": "error",
-    "no-unused-vars": "off",
-    "no-useless-catch": "error",
-    "no-useless-escape": "error",
-    "no-void": Array [
-      "error",
-      Object {
-        "allowAsStatement": true,
-      },
-    ],
-    "object-curly-newline": Array [
-      "error",
-      Object {
-        "consistent": true,
-        "multiline": true,
-      },
-    ],
-    "object-curly-spacing": "error",
-    "one-var": Array [
-      "error",
-      "never",
-    ],
-    "prefer-destructuring": Array [
-      "error",
-      Object {
-        "array": true,
-        "object": true,
-      },
-      Object {
-        "enforceForRenamedProperties": true,
-      },
-    ],
-    "promise/no-multiple-resolved": "error",
-    "quote-props": Array [
-      "error",
-      "as-needed",
-    ],
-    "quotes": Array [
-      "error",
-      "single",
-      Object {
-        "avoidEscape": true,
-      },
-    ],
-    "require-duplicate/no-duplicate": "error",
-    "sort-destructure-keys/sort-destructure-keys": "error",
-    "sort-keys": "off",
-    "sort-keys/sort-keys-fix": Array [
-      "error",
-      "asc",
-      Object {
-        "natural": true,
-      },
-    ],
-    "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": Array [
-      "warn",
-      Object {
-        "args": "after-used",
-        "argsIgnorePattern": "^_",
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-      },
-    ],
-  },
 }
 `;

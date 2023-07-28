@@ -2,7 +2,13 @@
   "name": "@mafalda-sfu/eslint-config",
   "version": "0.4.0",
   "description": "Mafalda SFU shareable ESLint config",
-  "main": ".eslintrc.js",
+  "exports": {
+    ".": "./.eslintrc.js",
+    "./format": "./lib/format.js",
+    "./layout": "./lib/layout.js",
+    "./problems": "./lib/problems.js",
+    "./suggestions": "./lib/suggestions.js"
+  },
   "scripts": {
     "docs": "cp README.md docs/ && jsdoc2md .*.js > docs/API.md",
     "lint": "eslint .",
@@ -34,10 +40,11 @@
   },
   "homepage": "https://github.com/Mafalda-SFU/eslint-config#readme",
   "dependencies": {
-    "@typescript-eslint/parser": "^5.60.1"
+    "@typescript-eslint/parser": "~5.62.0",
+    "deepmerge": "^4.3.1"
   },
   "devDependencies": {
-    "c8": "^8.0.0",
+    "c8": "^8.0.1",
     "chai": "^4.3.7",
     "husky": "^8.0.3",
     "jsdoc-to-markdown": "^8.0.0",
@@ -47,7 +54,7 @@
   "peerDependencies": {
     "@cspell/eslint-plugin": "^6.31.1",
     "@mafalda-sfu/eslint-plugin": "^2.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
     "eslint": "^8.43.0",
     "eslint-plugin-editorconfig": "mafalda-sfu/eslint-plugin-editorconfig",
     "eslint-plugin-import": "^2.27.5",
