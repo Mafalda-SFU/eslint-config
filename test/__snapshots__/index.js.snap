@@ -44,6 +44,9 @@ Object {
         "*.[jt]s?(x)",
       ],
       "parserOptions": Object {
+        "babelOptions": Object {
+          "configFile": "./.babelrc",
+        },
         "ecmaVersion": 2022,
         "sourceType": "module",
       },
@@ -126,7 +129,6 @@ Object {
     },
     Object {
       "extends": Array [
-        "plugin:jsdoc/recommended-typescript",
         "plugin:typescript-sort-keys/recommended",
       ],
       "files": Array [
@@ -214,6 +216,9 @@ Object {
         "*.[jt]s?(x)",
       ],
       "parserOptions": Object {
+        "babelOptions": Object {
+          "configFile": "./.babelrc",
+        },
         "ecmaVersion": 2022,
         "sourceType": "module",
       },
@@ -224,6 +229,198 @@ Object {
       "rules": Object {
         "@typescript-eslint/no-unused-vars": "off",
         "class-methods-use-this": "error",
+        "jsdoc/no-blank-block-descriptions": "error",
+        "jsdoc/no-blank-blocks": "error",
+        "jsdoc/require-asterisk-prefix": "error",
+        "jsdoc/sort-tags": Array [
+          "warn",
+          Object {
+            "tagSequence": Array [
+              Object {
+                "tags": Array [
+                  "summary",
+                  "typeSummary",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "module",
+                  "exports",
+                  "file",
+                  "fileoverview",
+                  "overview",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "typedef",
+                  "interface",
+                  "record",
+                  "template",
+                  "name",
+                  "kind",
+                  "type",
+                  "alias",
+                  "external",
+                  "host",
+                  "callback",
+                  "func",
+                  "function",
+                  "method",
+                  "class",
+                  "constructor",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "modifies",
+                  "mixes",
+                  "mixin",
+                  "mixinClass",
+                  "mixinFunction",
+                  "namespace",
+                  "borrows",
+                  "constructs",
+                  "lends",
+                  "implements",
+                  "requires",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "desc",
+                  "description",
+                  "classdesc",
+                  "tutorial",
+                  "copyright",
+                  "license",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "const",
+                  "constant",
+                  "final",
+                  "global",
+                  "readonly",
+                  "abstract",
+                  "virtual",
+                  "var",
+                  "member",
+                  "memberof",
+                  "memberof!",
+                  "inner",
+                  "instance",
+                  "inheritdoc",
+                  "inheritDoc",
+                  "override",
+                  "hideconstructor",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "async",
+                  "generator",
+                  "default",
+                  "defaultvalue",
+                  "enum",
+                  "augments",
+                  "extends",
+                  "event",
+                  "listens",
+                  "this",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "param",
+                  "arg",
+                  "argument",
+                  "prop",
+                  "property",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "yield",
+                  "yields",
+                  "return",
+                  "returns",
+                  "throws",
+                  "exception",
+                  "fires",
+                  "emits",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "static",
+                  "private",
+                  "protected",
+                  "public",
+                  "access",
+                  "package",
+                  "-other",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "see",
+                  "example",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "closurePrimitive",
+                  "customElement",
+                  "expose",
+                  "hidden",
+                  "idGenerator",
+                  "meaning",
+                  "ngInject",
+                  "owner",
+                  "wizaction",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "define",
+                  "dict",
+                  "export",
+                  "externs",
+                  "implicitCast",
+                  "noalias",
+                  "nocollapse",
+                  "nocompile",
+                  "noinline",
+                  "nosideeffects",
+                  "polymer",
+                  "polymerBehavior",
+                  "preserve",
+                  "struct",
+                  "suppress",
+                  "unrestricted",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "category",
+                ],
+              },
+              Object {
+                "tags": Array [
+                  "ignore",
+                  "author",
+                  "version",
+                  "variation",
+                  "since",
+                  "deprecated",
+                  "todo",
+                ],
+              },
+            ],
+          },
+        ],
         "n/prefer-promises/dns": "error",
         "n/prefer-promises/fs": "error",
         "no-console": "error",
@@ -267,6 +464,7 @@ Object {
     Object {
       "extends": Array [
         "plugin:@mafalda-sfu/suggestions-typescript",
+        "plugin:jsdoc/recommended-typescript",
       ],
       "files": Array [
         "*.ts?(x)",
@@ -278,7 +476,6 @@ Object {
     },
     Object {
       "extends": Array [
-        "eslint:recommended",
         "plugin:@cspell/recommended",
         "plugin:import/recommended",
         "plugin:n/recommended",
@@ -292,12 +489,16 @@ Object {
         "es2022": true,
       },
       "extends": Array [
+        "eslint:recommended",
         "plugin:promise/recommended",
       ],
       "files": Array [
         "*.[jt]s?(x)",
       ],
       "parserOptions": Object {
+        "babelOptions": Object {
+          "configFile": "./.babelrc",
+        },
         "ecmaVersion": 2022,
         "sourceType": "module",
       },
