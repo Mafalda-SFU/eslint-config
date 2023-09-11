@@ -150,6 +150,9 @@ Object {
       "files": Array [
         "*.json",
       ],
+      "rules": Object {
+        "editorconfig/max-len": "off",
+      },
     },
     Object {
       "extends": Array [
@@ -232,6 +235,13 @@ Object {
         "jsdoc/no-blank-block-descriptions": "error",
         "jsdoc/no-blank-blocks": "error",
         "jsdoc/require-asterisk-prefix": "error",
+        "jsdoc/require-jsdoc": Array [
+          "error",
+          Object {
+            "enableFixer": false,
+            "publicOnly": true,
+          },
+        ],
         "jsdoc/sort-tags": Array [
           "warn",
           Object {
@@ -420,6 +430,10 @@ Object {
               },
             ],
           },
+        ],
+        "jsdoc/tag-lines": Array [
+          "warn",
+          "any",
         ],
         "n/prefer-promises/dns": "error",
         "n/prefer-promises/fs": "error",
