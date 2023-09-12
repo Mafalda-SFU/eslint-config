@@ -4,6 +4,24 @@ exports[`layout 1`] = `
 Object {
   "overrides": Array [
     Object {
+      "env": Object {
+        "es2022": true,
+      },
+      "extends": Array [
+        "eslint:recommended",
+      ],
+      "files": Array [
+        "*.[jt]s?(x)",
+      ],
+      "parserOptions": Object {
+        "babelOptions": Object {
+          "configFile": "./.babelrc",
+        },
+        "ecmaVersion": 2022,
+        "sourceType": "module",
+      },
+    },
+    Object {
       "extends": Array [
         "plugin:editorconfig/all",
       ],
@@ -230,7 +248,6 @@ Object {
         "unused-imports",
       ],
       "rules": Object {
-        "@typescript-eslint/no-unused-vars": "off",
         "class-methods-use-this": "error",
         "jsdoc/no-blank-block-descriptions": "error",
         "jsdoc/no-blank-blocks": "error",
@@ -434,6 +451,9 @@ Object {
         "jsdoc/tag-lines": Array [
           "warn",
           "any",
+          Object {
+            "startLines": 1,
+          },
         ],
         "n/prefer-promises/dns": "error",
         "n/prefer-promises/fs": "error",
@@ -469,7 +489,9 @@ Object {
           Object {
             "args": "after-used",
             "argsIgnorePattern": "^_",
-            "vars": "all",
+            "caughtErrors": "all",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_",
             "varsIgnorePattern": "^_",
           },
         ],
@@ -487,6 +509,9 @@ Object {
       "parserOptions": Object {
         "project": "./tsconfig*.json",
       },
+      "rules": Object {
+        "@typescript-eslint/no-unused-vars": "off",
+      },
     },
     Object {
       "extends": Array [
@@ -503,7 +528,6 @@ Object {
         "es2022": true,
       },
       "extends": Array [
-        "eslint:recommended",
         "plugin:promise/recommended",
       ],
       "files": Array [
