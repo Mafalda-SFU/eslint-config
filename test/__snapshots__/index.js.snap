@@ -5,7 +5,7 @@ Object {
   "overrides": Array [
     Object {
       "env": Object {
-        "es2022": true,
+        "es2023": true,
       },
       "extends": Array [
         "eslint:recommended",
@@ -17,7 +17,7 @@ Object {
         "babelOptions": Object {
           "configFile": "./.babelrc",
         },
-        "ecmaVersion": 2022,
+        "ecmaVersion": 2023,
         "sourceType": "module",
       },
     },
@@ -53,7 +53,7 @@ Object {
     },
     Object {
       "env": Object {
-        "es2022": true,
+        "es2023": true,
       },
       "extends": Array [
         "plugin:@mafalda-sfu/layout",
@@ -65,7 +65,7 @@ Object {
         "babelOptions": Object {
           "configFile": "./.babelrc",
         },
-        "ecmaVersion": 2022,
+        "ecmaVersion": 2023,
         "sourceType": "module",
       },
       "plugins": Array [
@@ -226,7 +226,7 @@ Object {
     },
     Object {
       "env": Object {
-        "es2022": true,
+        "es2023": true,
       },
       "extends": Array [
         "plugin:@mafalda-sfu/suggestions",
@@ -240,7 +240,7 @@ Object {
         "babelOptions": Object {
           "configFile": "./.babelrc",
         },
-        "ecmaVersion": 2022,
+        "ecmaVersion": 2023,
         "sourceType": "module",
       },
       "plugins": Array [
@@ -525,7 +525,7 @@ Object {
     },
     Object {
       "env": Object {
-        "es2022": true,
+        "es2023": true,
       },
       "extends": Array [
         "plugin:promise/recommended",
@@ -537,7 +537,7 @@ Object {
         "babelOptions": Object {
           "configFile": "./.babelrc",
         },
-        "ecmaVersion": 2022,
+        "ecmaVersion": 2023,
         "sourceType": "module",
       },
       "plugins": Array [
