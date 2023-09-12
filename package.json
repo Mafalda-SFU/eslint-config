@@ -4,6 +4,7 @@
   "description": "Mafalda SFU shareable ESLint config",
   "exports": {
     ".": "./.eslintrc.js",
+    "./eslint-recommended": "./lib/eslint-recommended.js",
     "./format": "./lib/format.js",
     "./layout": "./lib/layout.js",
     "./problems": "./lib/problems.js",

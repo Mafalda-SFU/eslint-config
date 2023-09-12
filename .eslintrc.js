@@ -1,7 +1,8 @@
 
+const eslint = require('@mafalda-sfu/eslint-config/eslint-recommended')
 const format = require('@mafalda-sfu/eslint-config/format')
 const problems = require('@mafalda-sfu/eslint-config/problems')
-const merge = require('deepmerge')
+const {all} = require('deepmerge')
 
 
-module.exports = merge(format, problems) // Problems override format
+module.exports = all([eslint, format, problems]) // Problems override format
