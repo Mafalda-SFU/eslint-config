@@ -17,8 +17,8 @@
     "prepare": "husky",
     "pretest": "npm run lint",
     "pretest:json": "npm run lint",
-    "test": "c8 --all --src lib mocha",
-    "test:json": "c8 --all --reporter=json-summary --src lib mocha"
+    "test": "c8 --all --src lib mocha --reporter-option maxDiffSize=0",
+    "test:json": "c8 --all --reporter=json-summary --src lib mocha --reporter-option maxDiffSize=0"
   },
   "repository": {
     "type": "git",

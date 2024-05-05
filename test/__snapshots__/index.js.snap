@@ -255,7 +255,8 @@ Object {
         "jsdoc/require-jsdoc": Array [
           "error",
           Object {
-            "enableFixer": false,
+            "checkGetters": true,
+            "checkSetters": true,
             "publicOnly": true,
           },
         ],
@@ -572,6 +573,7 @@ Object {
         ],
         "import/prefer-default-export": "warn",
         "no-param-reassign": "off",
+        "no-plusplus": "off",
         "no-useless-catch": "error",
         "promise/no-multiple-resolved": "error",
       },
@@ -580,6 +582,7 @@ Object {
       "extends": Array [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:etc/recommended",
         "plugin:import/typescript",
       ],
       "files": Array [
@@ -598,6 +601,11 @@ Object {
           },
         ],
         "@typescript-eslint/no-shadow": "error",
+        "etc/no-enum": "error",
+        "etc/no-t": "error",
+        "etc/prefer-interface": "warn",
+        "etc/prefer-less-than": "error",
+        "etc/throw-error": "error",
         "no-shadow": "off",
       },
     },
